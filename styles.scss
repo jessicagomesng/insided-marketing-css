@@ -1,0 +1,915 @@
+@font-face {
+  font-family: "Metric";
+  font-style: normal;
+  font-weight: 400;
+
+  src: url("https://fast.karbonhq.com/fonts/MetricWeb-Regular.eot");
+  src: url("https://fast.karbonhq.com/fonts/MetricWeb-Regular.woff2")
+      format("woff2"),
+    url("https://fast.karbonhq.com/fonts/MetricWeb-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metric";
+  font-style: italic;
+  font-weight: normal;
+
+  src: url("https://fast.karbonhq.com/fonts/MetricWeb-RegularItalic.eot");
+  src: url("https://fast.karbonhq.com/fonts/MetricWeb-RegularItalic.woff2")
+      format("woff2"),
+    url("https://fast.karbonhq.com/fonts/MetricWeb-RegularItalic.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Metric";
+  font-weight: bold;
+
+  src: url("https://fast.karbonhq.com/fonts/MetricWeb-Semibold.eot");
+  src: url("https://fast.karbonhq.com/fonts/MetricWeb-Semibold.woff2")
+      format("woff2"),
+    url("https://fast.karbonhq.com/fonts/MetricWeb-Semibold.woff")
+      format("woff");
+}
+
+/* General */
+.sitewidth {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+input[type="search"] {
+  font-size: 16px;
+}
+
+.search-box__submit svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* buttons */
+.btn--cta:not(.btn--fixed__bottom),
+.btn--secondary,
+.btn--silent,
+a.btn--toggle.js-ajax-link,
+.btn--cancel,
+.btn--insided-brand,
+.btn--insided-secondary-brand,
+.btn--new-topic,
+.btn--secondary {
+  font-weight: 600 !important;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 6px 10px;
+}
+
+/* Login Page */
+body.private-register {
+  max-width: 660px;
+  background: #fef5e6;
+  padding-top: 80px;
+
+  .box.pagebox {
+    padding: 64px;
+    border-radius: 8px;
+  }
+
+  .box--note {
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .qa-page-title {
+    margin-bottom: 16px;
+  }
+
+  header + p {
+    margin-bottom: 24px;
+  }
+
+  input[type="checkbox"] + label {
+    padding-left: 2em;
+    padding-top: 16px;
+
+    &:before {
+      top: 12px;
+      font-weight: bold;
+    }
+  }
+
+  label,
+  input[type="checkbox"] + label {
+    color: #929292;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+
+  #login_submit,
+  #forgotPassword_submit,
+  #register_submit,
+  #unlockregistration_submit {
+    margin-top: 24px;
+    min-width: 120px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .form {
+    .first {
+      padding: 0;
+    }
+  }
+}
+
+/* Login popup */
+div.qa-login-modal {
+  text-align: center;
+
+  h4 {
+    margin-bottom: 16px;
+    margin-top: 16px;
+    font-size: 18px;
+  }
+
+  #modal_login .btn--sso,
+  #modal_register .btn--sso {
+    padding: 0 16px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 500px;
+    transition: background-color 0.1s ease-out;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+/* Header navigation */
+/* login button */
+a.js-open-modal.header-login-button.qa-header-login-button.btn.btn--secondary {
+  background-color: black;
+  padding: 0 16px;
+
+  &:hover {
+    background-color: #2c2c2c;
+  }
+}
+
+/* ask a q button */
+a.menu-create-topic.qa-menu-create-topic.btn.btn--cta {
+  background-color: black;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 500px;
+  transition: background-color 0.1s ease-out;
+  padding: 0px 16px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #2c2c2c;
+  }
+}
+
+.main-navigation--profile-link {
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Karbon logo in main nav */
+a[href="https://community.karbonhq.com/"]
+{
+  background-image: url("https://fast.karbonhq.com/community/karbon-community-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-right: 217px;
+  text-indent: -2000px;
+  line-height: 40px;
+
+  @media (max-width: 1024px) {
+    display: none !important;
+  }
+}
+
+.header-navigation {
+  background-color: #ee7f73;
+  border: none !important;
+
+  .header-navigation-button-icon {
+    display: none;
+  }
+
+  .main-menu-list--quiclinks {
+    border-bottom: 0;
+    margin-top: 8px;
+  }
+
+  .main-menu-list__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .main-menu-link--category strong {
+    margin-top: 16px;
+    margin-bottom: 6px;
+  }
+
+  @media (max-width: 767px) {
+    .main-navigation--nav-buttons-wrapper > ul > li.is-hidden-S {
+      display: block !important;
+    }
+
+    .header-navigation-search_mobile .header-navigation_extendable-search {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .main-navigation-site-width {
+      justify-content: flex-end;
+    }
+
+    .header-navigation-items-wrapper {
+      flex-grow: 0 !important;
+    }
+
+    .slider-menu .slider-header .slider-title {
+      font-size: 18px;
+    }
+  }
+}
+
+.header-navigation-items_menu,
+.dropdown--profile.qa-header-profile-dropdown {
+  font-size: 18px;
+  line-height: 20px;
+  align-items: center;
+}
+
+.main-menu-trigger {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400 !important;
+
+  @media (max-width: 1024px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+li.main-menu-list--overflow-scroll {
+  font-size: 18px;
+  background-color: white;
+  text-transform: capitalize;
+
+  .main-menu-link {
+    padding: 0 16px 10px;
+  }
+}
+
+.slider-menu {
+  .header-navigation-items_hamburger-list {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+.main-navigation--wrapper {
+  .search-icon {
+    background-image: url("https://fast.karbonhq.com/community/Search.svg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .search-icon svg {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    background-image: url("https://fast.karbonhq.com/community/karbon-community-logo-mobile.svg");
+    background-repeat: no-repeat;
+    padding-right: 50px;
+    background-position: calc(100% - 16px) center;
+  }
+}
+
+/* Homepage hero */
+.brand-hero {
+  background-color: #ee7f73;
+  height: 340px;
+
+  @media (max-width: 767px) {
+    height: auto;
+    padding: 58px 30px 78px;
+  }
+}
+
+.search-box input[type="search"] {
+  border-radius: 54px;
+  box-shadow: none;
+}
+
+.brand-hero-title {
+  margin-bottom: 40px !important;
+  font-size: 60px;
+  line-height: 64px;
+
+  @media (max-width: 767px) {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 16px !important;
+  }
+}
+
+/* Stats bar */
+.stats-bar {
+  background-color: #fcf5e9;
+  border: none !important;
+}
+
+.widget-last-visitors {
+  & > .widget-title {
+    color: black;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .avatar--S {
+    .profilepicture {
+      border: none;
+    }
+  }
+}
+
+.last-visitors .profilepicture img {
+  border: none;
+}
+
+ul.qa-stats-bar {
+  & > li {
+    font-size: 18px;
+    line-height: 20px;
+
+    @media (max-width: 1124px) {
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+}
+
+/* Articles */
+.post__content h1,
+.post__content h2,
+.post__content h3,
+.post__content h4 {
+  margin-bottom: 8px;
+}
+
+/* List topic cards */
+.list-widget-wrapper {
+  background: transparent;
+
+  .topic-view {
+    margin: 8px 0;
+    background-color: #fff;
+    border-radius: var(--config-card-border-radius);
+  }
+}
+
+/* Load more button for topic lists */
+.load-more-container {
+  .btn--cta {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #ee7f73;
+    border-radius: 4px;
+    padding: 14px 16px;
+  }
+}
+
+a.qa-link-tab.js-tab.branded\/_index-unanswered-topics
+  .sections__nav
+  .tabs--nav__container
+  .tabs--nav
+  .tabs--navigation
+  .tabs__item
+  > a,
+.sections__nav ul.tabs--navigation,
+.tabs--navigation .tabs .table .user_data h4 a {
+  font-size: 18px;
+  line-height: 34px;
+}
+
+.tabs--nav {
+  a.is-active {
+    font-weight: bold !important;
+  }
+}
+
+.link--user {
+  color: black;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.qa-widget-recent-topics {
+  background: white;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+
+.user-title.text--meta,
+.topic-view_header-item.text--meta {
+  color: black;
+}
+
+.topic-view_header-item_category-link {
+  border-bottom: 1px dashed black !important;
+}
+
+.qa-topic-block {
+  border-radius: 0px !important;
+  border-bottom: 1px solid #dddddd !important;
+}
+
+.topic-view_body {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.thread-list-block__title {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.topic-view .topic-view_body .thread-list-block__title .pill {
+  font-weight: 700;
+  letter-spacing: 0px;
+  font-size: 12px;
+  border-radius: 14px;
+  padding: 3px 8px 4px;
+}
+
+/* Widgets */
+.has-border,
+.list-widget-wrapper,
+.list-widget-wrapper > :not(:last-child),
+.Template-brand-stats,
+input[type="search"].search-box__input {
+  border: 0;
+}
+
+/* Badges & Leaderboard */
+.qa-badges-earned-list,
+.qa-badges-earned-list a,
+.qa-widget-leaderboard_points a,
+.qa-widget-leaderboard_points p,
+.event-detail-container a.event__title,
+.widget--likedusers.qa-widget-most-liked,
+.widget--related-topics,
+.widget--related-topics h6,
+.widget-solvedtopics .simple-topic-list--title,
+.widget-solvedtopics .simple-topic-list--item,
+.topic-create_suggestions-wrapper input,
+.selectize-input > *,
+.second.qa-topic-tag-field input {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+a.btn--show-more {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.leaderboard-link-text .btn--cta:not(.btn--fixed__bottom),
+.btn--cta.btn--show-more {
+  text-transform: none;
+}
+
+body:not(.twig_site-index) .full-width.Template-content {
+  margin-top: 32px;
+}
+
+/* Sidebar */
+.qa-div-sidebar {
+  padding-top: 44px;
+}
+
+.Sidebarmodule {
+  .widget {
+    .widget-title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+/* Featured cards widget */
+.featured-topic.quicklink__box {
+  border-radius: var(--config-card-border-radius) !important;
+}
+
+figure.figure-padding__icon + div.quicklink__title {
+  padding: 8px 35px 34px;
+}
+
+div.quicklink__title {
+  padding: 36px 24px;
+}
+
+.card-widget-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.card-widget-text {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+div.sitewidth > div.col > h3.widget__heading {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 419px) {
+  .quicklinks-wrapper {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .text--meta.card-widget-text {
+    display: none;
+  }
+
+  .quicklink__container > * {
+    width: 100%;
+  }
+
+  article.featured-topic.quicklink__box.has-border.card-widget-wrapper.quicklink-icon {
+    width: 100%;
+  }
+
+  .quicklink__container > :first-child:nth-last-child(2),
+  .quicklink__container > :first-child:nth-last-child(4) {
+    width: 100% !important;
+  }
+
+  .content--centered.quicklink__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
+
+  .content--centered.quicklink__container > article {
+    margin: 0;
+  }
+
+  figure.figure-padding__icon {
+    padding-top: 16px;
+  }
+
+  figure.figure-padding__icon + div.quicklink__title {
+    padding: 0 16px 32px !important;
+  }
+}
+
+/* Tags widget */
+a.qa-tag-pill {
+  background-color: #f6e1be;
+  border: none;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 6px 8px;
+
+  &:hover {
+    background-color: #eec684;
+    color: black;
+    border: none;
+  }
+}
+
+/* Custom greeting widget below stats bar */
+.custom-html-widget-wrapper {
+  margin-top: 0;
+}
+
+.full-width.custom-html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.community-greeting {
+  max-width: 718px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 24px;
+
+  h2 {
+    font-size: 36px !important;
+    font-weight: 400;
+    line-height: 40px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 30px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+
+    h2 {
+      font-size: 24px !important;
+      line-height: 28px;
+      font-weight: 400;
+    }
+  }
+}
+
+/* Announcement card widget */
+div[data-preact="widget-notification/FeaturedTopicsWrapper"] {
+  border-radius: 8px;
+}
+
+.featuredSide {
+  a.sidebar-notification {
+    border-radius: 8px;
+  }
+
+  div.box__pad {
+    padding: 16px 24px;
+  }
+}
+
+/* Events widget */
+.event-detail-container {
+  .event__type {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin-bottom: 2px;
+  }
+}
+
+.event__month {
+  border-top: 1px solid #cacaca !important;
+  border-right: 1px solid #cacaca !important;
+  border-left: 1px solid #cacaca !important;
+  border-radius: 4px 4px 0 0;
+}
+
+.event__date {
+  border-top: 0 !important;
+  border-bottom: 1px solid #cacaca !important;
+  border-right: 1px solid #cacaca !important;
+  border-left: 1px solid #cacaca !important;
+  border-radius: 0 0 4px 4px;
+}
+
+/* Subforum pages */
+body:not(.twig_site-index) {
+  .qa-topic-header ul,
+  .qa-topic-post-box,
+  .post__content.post__content--new-editor,
+  .post__user__meta .text--meta,
+  .post__user__meta .post__date time {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .sitewidth {
+    .breadcrumb-container {
+      background-color: #f3d5a4;
+      max-width: 4000px;
+
+      span,
+      a {
+        color: black !important;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .col {
+    .main-navigation--breadcrumb-wrapper {
+      .widget--breadcrumb {
+        ul {
+          max-width: 1120px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  .main-navigation--breadcrumb-wrapper {
+    .breadcrumb {
+      .breadcrumb-item {
+        .icon--caret-left {
+          &::before {
+            top: -2px;
+          }
+        }
+
+        .icon--caret-right {
+          &::before {
+            top: -2px;
+            color: black;
+          }
+        }
+      }
+    }
+
+    .menu-create-topic {
+      span {
+        display: block;
+      }
+    }
+
+    .widget--breadcrumb {
+      background-color: #f3d5a4;
+    }
+  }
+
+  .forum--search .thread-list-title,
+  .parent-category .thread-list-title {
+    margin-left: 0px;
+
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
+  }
+
+  .forum--search .thread-list-title,
+  .parent-category .thread-list-title {
+    margin-left: 0px;
+  }
+
+  header.qa-list-menu {
+    padding: 0;
+    font-size: 16px;
+    line-height: 20px;
+
+    @media (max-width: 1024px) {
+      padding: 0 16px;
+    }
+  }
+
+  header.qa-list-menu + div[data-preact] {
+    margin-top: 8px;
+    border-top: 1px solid #dddddd;
+    border-radius: 4px 4px 0 0;
+  }
+
+  header.qa-list-menu + div[data-preact] > div {
+    border-radius: 4px 4px 0 0 !important;
+  }
+
+  .thread-list-title.qa-subForum-header {
+    background-color: #f3d5a4;
+    border: none;
+    padding: 56px 30px 80px;
+
+    .sitewidth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .thread-list-view-description.qa-subforum-description {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    .searchbar-in-hero {
+      margin-top: 32px;
+    }
+
+    div.qa-topic-block.topic-view:last-child div {
+      border-radius: 0 0 4px 4px !important;
+    }
+
+    .qa-topic-block.topic-view {
+      margin: 0;
+    }
+
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+
+      p.thread-list-view-description.qa-subforum-description {
+        margin-top: 0;
+      }
+
+      .searchbar-in-hero {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  .qa-subforum-sort-dropdown .dropdown-links::after {
+    content: " ";
+    background-image: url("https://fast.karbonhq.com/community/chevron-down.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 4px;
+    margin-top: 0;
+    border: 0;
+  }
+
+  div[data-preact="topic-list-view/TopicListItemView"] {
+    border-right: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    border-bottom: 0;
+
+    &:last-child {
+      border-radius: 0 0 4px 4px !important;
+    }
+  }
+}
+
+body.twig_site-forum.parent-category .thread-list-title.qa-subForum-header,
+body.forum--search .thread-list-title.qa-subForum-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    text-align: center;
+    margin: 0;
+    padding: 48px 16px 64px;
+  }
+
+  @media (min-width: 1140px) {
+    margin-left: calc((-100vw + 1140px) / 2);
+    margin-right: calc((-100vw + 1140px) / 2);
+    padding-left: calc((100vw - 1140px) / 2);
+    padding-right: calc((100vw - 1140px) / 2);
+  }
+}
+
+div[data-preact="category/CategoryList"] {
+  li.category-page_list-item.card-widget-wrapper {
+    background: white;
+    border: 1px solid #dddddd;
+
+    @media (max-width: 767px) {
+      background: white;
+      border-top: 1px solid #dddddd;
+      border-bottom: 0;
+
+      &:last-child {
+        border-bottom: 1px solid #dddddd;
+      }
+    }
+  }
+
+  a.category-page_list-item-link {
+    font-size: 18px;
+    font-weight: 400 !important;
+  }
+
+  .icon--caret-right::before {
+    content: "";
+    background-image: url("https://fast.karbonhq.com/community/Chevron-right.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Search result page */
+.instant-search-wrapper {
+  margin-top: 16px;
+
+  @media (min-width: 1025px) {
+    margin-top: 32px;
+  }
+}
